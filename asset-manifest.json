@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/e-learning-conference/static/css/main.073c9b0a.css",
-    "main.js": "/e-learning-conference/static/js/main.f748d64c.js",
-    "static/js/787.7f5c6f33.chunk.js": "/e-learning-conference/static/js/787.7f5c6f33.chunk.js",
-    "static/media/logo.svg": "/e-learning-conference/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/e-learning-conference/static/css/main.3d6ca157.css",
+    "main.js": "/e-learning-conference/static/js/main.cd85943b.js",
+    "static/media/Background.png": "/e-learning-conference/static/media/Background.68c3a6bb9b23fa4de325.png",
+    "static/media/anomalia-bold-aaa.otf": "/e-learning-conference/static/media/anomalia-bold-aaa.a18345a66e53ba064761.otf",
+    "static/media/anomalia-demibold-aaa.otf": "/e-learning-conference/static/media/anomalia-demibold-aaa.adeafa8d64386c699b5b.otf",
+    "static/media/anomalia-medium-aaa.otf": "/e-learning-conference/static/media/anomalia-medium-aaa.35cf2092a75ce06f13c4.otf",
+    "static/media/anomalia-ultrabold-aaa.otf": "/e-learning-conference/static/media/anomalia-ultrabold-aaa.ef3445a9e4a76cf9119d.otf",
+    "static/media/anomalia-regular-aaa.otf": "/e-learning-conference/static/media/anomalia-regular-aaa.27244cbd094abf0d41b5.otf",
+    "static/media/anomalia-light-aaa.otf": "/e-learning-conference/static/media/anomalia-light-aaa.b246388d30d724edfbb1.otf",
+    "static/media/Assistant-SemiBold.ttf": "/e-learning-conference/static/media/Assistant-SemiBold.1d28e66bb392394cb09d.ttf",
+    "static/media/Assistant-Light.ttf": "/e-learning-conference/static/media/Assistant-Light.1af74b30299892efee4f.ttf",
+    "static/media/Assistant-Regular.ttf": "/e-learning-conference/static/media/Assistant-Regular.992f6822fa89dedcae08.ttf",
+    "static/media/Assistant-Bold.ttf": "/e-learning-conference/static/media/Assistant-Bold.8ce32fc768ffb230776b.ttf",
+    "static/media/Assistant-Medium.ttf": "/e-learning-conference/static/media/Assistant-Medium.21f035dd574e9e732477.ttf",
     "index.html": "/e-learning-conference/index.html",
-    "main.073c9b0a.css.map": "/e-learning-conference/static/css/main.073c9b0a.css.map",
-    "main.f748d64c.js.map": "/e-learning-conference/static/js/main.f748d64c.js.map",
-    "787.7f5c6f33.chunk.js.map": "/e-learning-conference/static/js/787.7f5c6f33.chunk.js.map"
+    "main.3d6ca157.css.map": "/e-learning-conference/static/css/main.3d6ca157.css.map",
+    "main.cd85943b.js.map": "/e-learning-conference/static/js/main.cd85943b.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.f748d64c.js"
+    "static/css/main.3d6ca157.css",
+    "static/js/main.cd85943b.js"
   ]
 }
