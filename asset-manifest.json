@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/e-learning-conference/static/css/main.073c9b0a.css",
+    "main.js": "/e-learning-conference/static/js/main.f748d64c.js",
+    "static/js/787.7f5c6f33.chunk.js": "/e-learning-conference/static/js/787.7f5c6f33.chunk.js",
+    "static/media/logo.svg": "/e-learning-conference/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/e-learning-conference/index.html",
+    "main.073c9b0a.css.map": "/e-learning-conference/static/css/main.073c9b0a.css.map",
+    "main.f748d64c.js.map": "/e-learning-conference/static/js/main.f748d64c.js.map",
+    "787.7f5c6f33.chunk.js.map": "/e-learning-conference/static/js/787.7f5c6f33.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.f748d64c.js"
+  ]
+}
