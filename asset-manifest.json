@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/e-learning-conference/static/css/main.69116c1e.css",
-    "main.js": "/e-learning-conference/static/js/main.52bf26e7.js",
+    "main.css": "/e-learning-conference/static/css/main.963b9bd9.css",
+    "main.js": "/e-learning-conference/static/js/main.725ba7f5.js",
     "static/media/Background.png": "/e-learning-conference/static/media/Background.68c3a6bb9b23fa4de325.png",
     "static/media/anomalia-bold-aaa.otf": "/e-learning-conference/static/media/anomalia-bold-aaa.a18345a66e53ba064761.otf",
     "static/media/anomalia-demibold-aaa.otf": "/e-learning-conference/static/media/anomalia-demibold-aaa.adeafa8d64386c699b5b.otf",
@@ -14,12 +14,15 @@
     "static/media/Assistant-Regular.ttf": "/e-learning-conference/static/media/Assistant-Regular.992f6822fa89dedcae08.ttf",
     "static/media/Assistant-Bold.ttf": "/e-learning-conference/static/media/Assistant-Bold.8ce32fc768ffb230776b.ttf",
     "static/media/Assistant-Medium.ttf": "/e-learning-conference/static/media/Assistant-Medium.21f035dd574e9e732477.ttf",
+    "static/media/selectedAbout.png": "/e-learning-conference/static/media/selectedAbout.58ff1e10a605ff7e49c3.png",
+    "static/media/SelectedMain.png": "/e-learning-conference/static/media/SelectedMain.8b728375a1206b35dc20.png",
+    "static/media/selectedSchedule.png": "/e-learning-conference/static/media/selectedSchedule.a74f44745644184c8ff1.png",
     "index.html": "/e-learning-conference/index.html",
-    "main.69116c1e.css.map": "/e-learning-conference/static/css/main.69116c1e.css.map",
-    "main.52bf26e7.js.map": "/e-learning-conference/static/js/main.52bf26e7.js.map"
+    "main.963b9bd9.css.map": "/e-learning-conference/static/css/main.963b9bd9.css.map",
+    "main.725ba7f5.js.map": "/e-learning-conference/static/js/main.725ba7f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.69116c1e.css",
-    "static/js/main.52bf26e7.js"
+    "static/css/main.963b9bd9.css",
+    "static/js/main.725ba7f5.js"
   ]
 }
