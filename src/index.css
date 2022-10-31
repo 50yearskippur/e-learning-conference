@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: Assistant-Bold;
+    src: url(./fonts/Assistant-Bold.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: Assistant-Light;
+    src: url(./fonts/Assistant-Light.ttf);
+}
+
+@font-face {
+    font-family: Assistant-Medium;
+    src: url(./fonts/Assistant-Medium.ttf);
+}
+
+@font-face {
+    font-family: Assistant-Regular;
+    src: url(./fonts/Assistant-Regular.ttf);
+}
+
+@font-face {
+    font-family: Assistant-SemiBold;
+    src: url(./fonts/Assistant-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Anomalia-bold;
+    src: url(./fonts/anomalia-bold-aaa.otf);
+}
+
+@font-face {
+    font-family: Anomalia-demibold;
+    src: url(./fonts/anomalia-demibold-aaa.otf);
+}
+
+@font-face {
+    font-family: Anomalia-light;
+    src: url(./fonts/anomalia-light-aaa.otf);
+}
+
+@font-face {
+    font-family: Anomalia-medium;
+    src: url(./fonts/anomalia-medium-aaa.otf);
+}
+
+@font-face {
+    font-family: Anomalia-regular;
+    src: url(./fonts/anomalia-regular-aaa.otf);
+}
+
+@font-face {
+    font-family: Anomalia-ultrabold;
+    src: url(./fonts/anomalia-ultrabold-aaa.otf);
 }
