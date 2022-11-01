@@ -1,20 +1,21 @@
 import React, {useState,useEffect} from "react";
 import {useReactCountdown} from 'use-react-countdown'
 import styled from "styled-components";
-import {PageData} from "./pageData.js";
+import {PageData, StaticData} from "./pageData.js";
 import Button from "../../components/Button/Button.jsx";
 import FlipCard from '../../components/FlipCard/FlipCard';
-import { useNavigate } from "react-router-dom";
+import Date from '../../static-media/date.png';
+
 
 const DATE_TILL_CONFERENCE = 'November 20, 2022 09:00:00'
 
-const TextArea = styled.div(({fontSize, fontFamily, width, marginTop})=>({
+const TextArea = styled.div(({fontSize, fontFamily, width, marginTop,textAlign})=>({
     fontSize,
     fontFamily,
     marginTop,
     width,
     color: "white",
-    textAlign: "center"
+    textAlign: textAlign ? textAlign : "center"
 }))
 
 const ContentWrapper = styled.div({
@@ -22,7 +23,6 @@ const ContentWrapper = styled.div({
     flexDirection: "column",
     alignItems: "center",
     height: '70%',
-    marginTop: '5.7rem',
     whiteSpace: 'pre-wrap'
 })
 
@@ -47,13 +47,30 @@ const DigitContainer = styled.div({
     alignItems: "center"
 })
 
+const TitlesContainer = styled.div({
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    marginTop: "1.5rem",
+    width: "90%"
+})
+
+const ImgTitle = styled.img({
+    width: '70%',
+    marginTop: "3rem"
+})
+
+
+const Seperaor = styled.div({
+    marginTop: "0.8rem"
+})
+
 export default function HomePage(){
     const {days, hours, minutes, seconds} = useReactCountdown(DATE_TILL_CONFERENCE);
     const [secondsShuffle, setSeconds] = useState(false);
     const [minutesShuffle, setMinutes] = useState(false);
     const [hoursShuffle, setHours] = useState(false);
     const [daysShuffle, setDays] = useState(false);
-    const navigate = useNavigate();
 
 
     useEffect(()=>{
@@ -118,11 +135,11 @@ export default function HomePage(){
             </TextArea>
             <ButtonContainer>
                 <Button 
-                    text={PageData.buttons.moreInfo}
+                    text={PageData.buttons.signUp}
                     type={true}
                     width="100%"
                     fontSize='1.3rem'
-                    onClick={()=>{navigate('/more-info')}}
+                    onClick={()=>{}}
                 />
                 <Button 
                     text={PageData.buttons.openWaze}
@@ -188,6 +205,90 @@ export default function HomePage(){
                     </TextArea>
                 </DigitContainer>
             </Countdown>
+            <ImgTitle 
+                src={Date}
+            />
+            <TextArea
+                fontFamily="Assistant-Regular"
+                marginTop='1.5rem'
+                fontSize="0.95rem"
+                width="95%"
+            >
+                {StaticData.introductionParagraph}
+            </TextArea>
+            <TextArea
+                fontFamily="Assistant-Light"
+                marginTop='1.2rem'
+                fontSize="0.85rem"
+                width="95%"
+            >
+                {StaticData.commanders}
+            </TextArea>
+            <TitlesContainer>
+                <TextArea
+                    fontFamily="Anomalia-demibold"
+                    fontSize="1.5rem"
+                >
+                    {StaticData.titles.who}
+                </TextArea>
+                <TextArea
+                    fontFamily="Assistant-Light"
+                    fontSize="0.9rem"
+                >
+                    {StaticData.explanation.who}
+                </TextArea>
+                <Seperaor />
+                <TextArea
+                    fontFamily="Anomalia-demibold"
+                    fontSize="1.5rem"
+                >
+                    {StaticData.titles.where}
+                </TextArea>
+                <TextArea
+                    fontFamily="Assistant-Light"
+                    fontSize="0.9rem"
+                >
+                    {StaticData.explanation.where}
+                </TextArea>
+                <Seperaor />
+                <TextArea
+                    fontFamily="Anomalia-demibold"
+                    fontSize="1.5rem"
+                >
+                    {StaticData.titles.when}
+                </TextArea>
+                <TextArea
+                    fontFamily="Assistant-Light"
+                    fontSize="0.9rem"
+                    textAlign="right"
+                >
+                    {StaticData.explanation.when}
+                </TextArea>
+                <Seperaor />
+                <TextArea
+                    fontFamily="Anomalia-demibold"
+                    fontSize="1.5rem"
+                >
+                    {StaticData.titles.moreInfo}
+                </TextArea>
+                <TextArea
+                    fontFamily="Assistant-Light"
+                    fontSize="0.9rem"
+                    textAlign="right"
+                >
+                    {StaticData.explanation.moreInfoPartOne}
+                    <a 
+                        href={`mailTo: ${StaticData.explanation.moreInfoPartTwo}`}
+                        style={{
+                            textDecoration: "none",
+                            color: "#3ca6d8"
+                        }}
+                    >
+                        {StaticData.explanation.moreInfoPartTwo}
+                    </a>
+                    {StaticData.explanation.moreInfoPartThree}
+                </TextArea>
+            </TitlesContainer>
         </ContentWrapper>
     )
 }

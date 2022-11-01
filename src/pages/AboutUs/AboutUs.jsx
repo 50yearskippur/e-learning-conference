@@ -17,7 +17,6 @@ const ContentWrapper = styled.div({
     flexDirection: "column",
     alignItems: "center",
     height: '70%',
-    marginTop: '5.7rem',
     whiteSpace: 'pre-wrap'
 })
 
