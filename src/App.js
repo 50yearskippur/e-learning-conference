@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import Bar from "./components/Bar/Bar";
 import MoreInfo from "./pages/MoreInfo/MoreInfo";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import Schedule from "./pages/Schedule/Schedule";
 
 function App() {
   const navigate = useNavigate();  
@@ -24,6 +25,7 @@ function App() {
             <Route path="/e-learning-conference" element={<HomePage />} />
             <Route path="/more-info" element={<MoreInfo />} />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/schedule" element={<Schedule />} />
         </Routes>
         <Bar />
     </>
