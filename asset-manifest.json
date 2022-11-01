@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/e-learning-conference/static/css/main.963b9bd9.css",
-    "main.js": "/e-learning-conference/static/js/main.8e3b8f94.js",
+    "main.js": "/e-learning-conference/static/js/main.ab35cee1.js",
     "static/media/Background.png": "/e-learning-conference/static/media/Background.68c3a6bb9b23fa4de325.png",
     "static/media/date.png": "/e-learning-conference/static/media/date.d2eaf28cfe0afd3f00f3.png",
     "static/media/anomalia-bold-aaa.otf": "/e-learning-conference/static/media/anomalia-bold-aaa.a18345a66e53ba064761.otf",
@@ -25,10 +25,10 @@
     "static/media/graph.png": "/e-learning-conference/static/media/graph.dd41da05f4069f1b9394.png",
     "index.html": "/e-learning-conference/index.html",
     "main.963b9bd9.css.map": "/e-learning-conference/static/css/main.963b9bd9.css.map",
-    "main.8e3b8f94.js.map": "/e-learning-conference/static/js/main.8e3b8f94.js.map"
+    "main.ab35cee1.js.map": "/e-learning-conference/static/js/main.ab35cee1.js.map"
   },
   "entrypoints": [
     "static/css/main.963b9bd9.css",
-    "static/js/main.8e3b8f94.js"
+    "static/js/main.ab35cee1.js"
   ]
 }
