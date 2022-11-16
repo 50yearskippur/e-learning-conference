@@ -18,6 +18,7 @@ const ContentWrapper = styled.div(()=>({
     alignItems: "center",
     height: '100rem',
     whiteSpace: 'pre-wrap',
+    overflow: 'hidden'
 }));
 
 const GraphElement = styled.img({

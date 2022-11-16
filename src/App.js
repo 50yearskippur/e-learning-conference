@@ -16,6 +16,15 @@ function App() {
     if(!MobileDetection()){
         navigate('/notMobile');
     }
+    
+    let body = document.querySelector("body");
+
+    if(window.location.pathname.includes("about-us")){
+      body.style.overflow = 'hidden';
+      window.scrollTo(0,0);
+    }else{
+      body.style.overflow = 'auto';
+    }
 
   },[navigate])  
 
