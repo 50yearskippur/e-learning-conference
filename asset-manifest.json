@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/e-learning-conference/static/css/main.570e318a.css",
-    "main.js": "/e-learning-conference/static/js/main.b1f52e6a.js",
+    "main.js": "/e-learning-conference/static/js/main.7b7b203d.js",
     "static/media/Background.png": "/e-learning-conference/static/media/Background.28a4ea108183c072d94e.png",
     "static/media/Artech.png": "/e-learning-conference/static/media/Artech.3c33413def1dcf108ed6.png",
     "static/media/AI.png": "/e-learning-conference/static/media/AI.2ab0d547aed9df89fd77.png",
@@ -25,13 +25,14 @@
     "static/media/about.png": "/e-learning-conference/static/media/about.9174fc4e8c5f89452085.png",
     "static/media/Schedule.png": "/e-learning-conference/static/media/Schedule.f38ff84fe14bf9cb59c7.png",
     "static/media/Main.png": "/e-learning-conference/static/media/Main.0fb5bdfc79f2d61b2948.png",
+    "static/media/signup.png": "/e-learning-conference/static/media/signup.f417d5d0595ef0c14a9e.png",
     "static/media/graph.png": "/e-learning-conference/static/media/graph.dd41da05f4069f1b9394.png",
     "index.html": "/e-learning-conference/index.html",
     "main.570e318a.css.map": "/e-learning-conference/static/css/main.570e318a.css.map",
-    "main.b1f52e6a.js.map": "/e-learning-conference/static/js/main.b1f52e6a.js.map"
+    "main.7b7b203d.js.map": "/e-learning-conference/static/js/main.7b7b203d.js.map"
   },
   "entrypoints": [
     "static/css/main.570e318a.css",
-    "static/js/main.b1f52e6a.js"
+    "static/js/main.7b7b203d.js"
   ]
 }
