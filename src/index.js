@@ -10,10 +10,10 @@ const Background = styled.div({
     backgroundImage: `url(${BackgroundImg})`,
     backgroundSize: "100% 100%",
     backgroundRepeat: "no-repeat",
-    height: "100%",
+    height: "fit-content",
     width: "100%",
     position: "absolute",
-    top: 0
+    top: 0,
 })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -21,7 +21,7 @@ body {
   height: 5rem;
   perspective-origin: 50% 50%;
   perspective: 300px;
-  background-color: rgba(96,68,145,255);
+  background-color: rgb(193,138,203);
   border-radius: 3px;
   box-shadow: 0px 10px 10px -10px grey;
 }
@@ -38,7 +38,7 @@ body {
 .upperCard span, .lowerCard span {
   font-size: 3rem;
   font-family: Assistant-Regular;
-  color: white;
+  color: #79028e;
 }
 
 .upperCard {
@@ -75,14 +75,14 @@ body {
 .flipCard span {
   font-family: Assistant-Regular;
   font-size: 3rem;
-  color: white;
+  color: #79028e;
 }
 .flipCard.unfold {
   top: 50%;
   align-items: flex-start;
   transform-origin: 50% 0%;
   transform: rotateX(180deg);
-  background-color: rgba(176,147,199,255);
+  background-color: rgb(241,229,243);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border: 0.5px solid whitesmoke;
@@ -96,7 +96,7 @@ body {
   align-items: flex-end;
   transform-origin: 50% 100%;
   transform: rotateX(0deg);
-  background-color: rgba(176,147,199,255);
+  background-color: rgb(241,229,243);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   border: 0.5px solid whitesmoke;

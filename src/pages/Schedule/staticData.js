@@ -18,7 +18,7 @@ export const staticData ={
     },
     fithEvent: {
         hour: "11:30-12:00",
-        event: 'הרצאה-AI בינה מלאכותית- \n                           מגמות וטרנדים בעולם הלמידה'
+        event: 'הרצאה-AI בינה מלאכותית- \nמגמות וטרנדים בעולם הלמידה'
     },
     sixthEvent: {
         hour: '12:00-12:50',

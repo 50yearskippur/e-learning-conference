@@ -7,13 +7,14 @@ import about from '../../static-media/about.png';
 import selectedAbout from '../../static-media/selectedAbout.png';
 import Schedule from '../../static-media/Schedule.png';
 import selectedSchedule from '../../static-media/selectedSchedule.png';
+import Signup from '../../static-media/signup.png';
 
 
 const BarContainer = styled.div({
     width: "100%",
-    height: "11%",
-    backgroundColor: "rgba(255, 255,255, 0.5)",
-    position: 'absolute',
+    height: "4.5rem",
+    backgroundColor: "rgba(186,129,197,0.95)",
+    position: 'fixed',
     bottom: 0,
     display: 'flex',
     justifyContent: 'center'
@@ -30,7 +31,10 @@ const Icon = styled.img({
     height: '4.6rem'
 })
 
-export default function Bar(){
+
+
+
+export default function Bar({scheduleRef}){
     const [selectedIcon ,setSelected] = useState(3);
     const navigate = useNavigate();
 
@@ -45,11 +49,17 @@ export default function Bar(){
                     src={selectedIcon === 3 ? 
                             selectedMain : Main} 
                     onClick={()=>{setSelected(3); navigate('/e-learning-conference')}}
+                />                <Icon 
+                src={Signup} 
+                onClick={()=>{}}
                 />
                 <Icon 
                     src={selectedIcon === 2 ? 
                             selectedSchedule : Schedule} 
-                    onClick={()=>{setSelected(2); navigate('/schedule')}}
+                    onClick={()=>{
+                        setSelected(2); 
+                        scheduleRef.current.scrollIntoView({ behavior: 'smooth'})
+                    }}
                 />
             </IconsContainer>
         </BarContainer>

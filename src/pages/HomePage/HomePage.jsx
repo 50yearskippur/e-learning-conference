@@ -1,20 +1,22 @@
 import React, {useState,useEffect} from "react";
 import {useReactCountdown} from 'use-react-countdown'
 import styled from "styled-components";
-import {PageData, StaticData} from "./pageData.js";
+import {PageData, ScheduleData, ContactUs} from "./pageData.js";
 import Button from "../../components/Button/Button.jsx";
 import FlipCard from '../../components/FlipCard/FlipCard';
-import Date from '../../static-media/date.png';
+import Vr from '../../static-media/vr.png';
+import Micro from '../../static-media/micro.png';
+import AI from '../../static-media/AI.png';
+import Workshop from '../../static-media/workshop.png';
 
+const DATE_TILL_CONFERENCE = 'December 11, 2022 09:00:00'
 
-const DATE_TILL_CONFERENCE = 'November 20, 2022 09:00:00'
-
-const TextArea = styled.div(({fontSize, fontFamily, width, marginTop,textAlign})=>({
+const TextArea = styled.div(({fontSize, fontFamily, width, marginTop,textAlign,color})=>({
     fontSize,
     fontFamily,
     marginTop,
     width,
-    color: "white",
+    color: color ? color : "white",
     textAlign: textAlign ? textAlign : "center"
 }))
 
@@ -22,7 +24,7 @@ const ContentWrapper = styled.div({
     display: 'flex',
     flexDirection: "column",
     alignItems: "center",
-    height: '70%',
+    height: '145rem',
     whiteSpace: 'pre-wrap'
 })
 
@@ -37,7 +39,7 @@ const ButtonContainer = styled.div({
 const Countdown = styled.div({
     display: 'flex',
     width: "85%",
-    marginTop: "1.8rem"
+    marginTop: "10rem"
 })
 
 const DigitContainer = styled.div({
@@ -47,25 +49,53 @@ const DigitContainer = styled.div({
     alignItems: "center"
 })
 
-const TitlesContainer = styled.div({
+const TopPartContainer = styled.div({
+    marginTop: "20%",
     display: "flex",
     flexDirection: "column",
-    alignItems: "flex-start",
+    alignItems: "center",
+    width: "100%"
+})
+
+const ScheduleContainer = styled.div({
+    marginTop: "4rem",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    width: "100%"
+})
+
+const PartContainer = styled.div({
+    width: "85%",
+    borderRadius: "3px",
+    height: "5rem",
     marginTop: "1.5rem",
-    width: "90%"
+    boxShadow: "-3px 0px 47px 1px rgba(181,177,255,1)",
+    webkitBoxShadow: "-3px 0px 47px 1px rgba(181,177,255,1)",
+    mozBoxShadow: "3px 0px 47px 1px rgba(181,177,255,1)"
 })
 
-const ImgTitle = styled.img({
-    width: '70%',
-    marginTop: "3rem"
+const ContactUsContainer = styled.div({
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    marginTop: '1.9rem'
 })
 
-
-const Seperaor = styled.div({
-    marginTop: "0.8rem"
+const PartWrapper = styled.div({
+    display: 'flex',
+    height: '100%',
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-around"
 })
 
-export default function HomePage(){
+const WithIconWrapper = styled.div({
+    height: "100%",
+    width: "100%"
+})
+
+export default function HomePage({scheduleRef}){
     const {days, hours, minutes, seconds} = useReactCountdown(DATE_TILL_CONFERENCE);
     const [secondsShuffle, setSeconds] = useState(false);
     const [minutesShuffle, setMinutes] = useState(false);
@@ -99,196 +129,503 @@ export default function HomePage(){
 
     return(
         <ContentWrapper>
-            <TextArea 
-                fontFamily='Anomalia-demibold'
-                fontSize="2rem"
-            >
-                {PageData.title}
-            </TextArea>
-            <TextArea
-                fontFamily="Assistant-SemiBold"
-                fontSize='1.3rem'
-                marginTop="0.4rem"
-            >
-                {PageData.subTitle}
-            </TextArea>
-            <TextArea
-                fontFamily="Assistant-Light"
-                width="76%"
-                marginTop='1rem'
-            >
-                {PageData.firstParagraph}
-            </TextArea>
-            <TextArea
-                fontFamily="Assistant-SemiBold"
-                fontSize="1.3rem"
-                marginTop="1.5rem"
-            >
-                {PageData.locationInfo}
-            </TextArea>
-            <TextArea
-                fontFamily="Assistant-light"
-                fontSize='0.9rem'
-                marginTop="1.5rem"
-            >
-                {PageData.pleaseRegister}
-            </TextArea>
-            <ButtonContainer>
-                <Button 
-                    text={PageData.buttons.signUp}
-                    type={true}
-                    width="100%"
+            <TopPartContainer>
+
+                <TextArea 
+                    fontFamily='Anomalia-demibold'
+                    fontSize="2rem"
+                >
+                    {PageData.title}
+                </TextArea>
+                <TextArea
+                    fontFamily="Assistant-SemiBold"
                     fontSize='1.3rem'
-                    onClick={()=>{}}
-                />
-                <Button 
-                    text={PageData.buttons.openWaze}
-                    type={false}
-                    width="47.5%"
-                    fontSize='1.1rem'
-                    onClick={openWaze}
-                    style={{marginTop: '5%', marginLeft: "2.5%"}}
-                />
-                <Button 
-                    text={PageData.buttons.addToCalendar}
-                    type={false}
-                    width="47.5%"
-                    fontSize='1.1rem'
-                    onClick={addToGCal}
-                    style={{marginTop: '5%', marginRight: '2.5%'}}
-                />
-            </ButtonContainer>
-            <Countdown>
-                <DigitContainer>
-                    <FlipCard 
-                        digit={seconds}
-                        shuffle={secondsShuffle}
+                    marginTop="0.4rem"
+                >
+                    {PageData.subTitle}
+                </TextArea>
+                <TextArea
+                    fontFamily="Assistant-Light"
+                    width="76%"
+                    marginTop='1rem'
+                >
+                    {PageData.firstParagraph}
+                </TextArea>
+                <TextArea
+                    fontFamily="Assistant-SemiBold"
+                    fontSize="1.6rem"
+                    marginTop="1.5rem"
+                >
+                    {PageData.locationInfo}
+                </TextArea>
+                <ButtonContainer>
+                    <Button 
+                        text={PageData.buttons.signUp}
+                        type={true}
+                        width="100%"
+                        fontSize='1.3rem'
+                        onClick={()=>{}}
                     />
-                    <TextArea
-                        fontFamily='Anomalia-light'
-                    >
-                        שניות
-                    </TextArea>
-                </DigitContainer>
-                <DigitContainer>
-                    <FlipCard 
-                        digit={minutes}
-                        shuffle={minutesShuffle}
+                    <Button 
+                        text={PageData.buttons.openWaze}
+                        type={false}
+                        width="47.5%"
+                        fontSize='1.1rem'
+                        onClick={openWaze}
+                        style={{marginTop: '5%', marginLeft: "2.5%"}}
                     />
-                    <TextArea
-                        fontFamily='Anomalia-light'
-                    >
-                        דקות
-                    </TextArea>
-                </DigitContainer>
-                <DigitContainer>
-                    <FlipCard 
-                        digit={hours}
-                        unit="hours"
-                        shuffle={hoursShuffle}
+                    <Button 
+                        text={PageData.buttons.addToCalendar}
+                        type={false}
+                        width="47.5%"
+                        fontSize='1.1rem'
+                        onClick={addToGCal}
+                        style={{marginTop: '5%', marginRight: '2.5%'}}
                     />
-                    <TextArea
-                        fontFamily='Anomalia-light'
-                    >
-                        שעות
-                    </TextArea>
-                </DigitContainer>
-                <DigitContainer>
-                    <FlipCard 
-                        digit={days}
-                        shuffle={daysShuffle}
-                    />
-                    <TextArea
-                        fontFamily='Anomalia-light'
-                    >
-                        ימים
-                    </TextArea>
-                </DigitContainer>
-            </Countdown>
-            <ImgTitle 
-                src={Date}
-            />
-            <TextArea
-                fontFamily="Assistant-Regular"
-                marginTop='1.5rem'
-                fontSize="0.95rem"
-                width="95%"
+                </ButtonContainer>
+                <Countdown>
+                    <DigitContainer>
+                        <FlipCard 
+                            digit={seconds}
+                            shuffle={secondsShuffle}
+                        />
+                        <TextArea
+                            fontFamily='Anomalia-light'
+                            color="rgb(121,2,142)"
+                        >
+                            שניות
+                        </TextArea>
+                    </DigitContainer>
+                    <DigitContainer>
+                        <FlipCard 
+                            digit={minutes}
+                            shuffle={minutesShuffle}
+                        />
+                        <TextArea
+                            fontFamily='Anomalia-light'
+                            color="rgb(121,2,142)"
+                        >
+                            דקות
+                        </TextArea>
+                    </DigitContainer>
+                    <DigitContainer>
+                        <FlipCard 
+                            digit={hours}
+                            unit="hours"
+                            shuffle={hoursShuffle}
+                        />
+                        <TextArea
+                            fontFamily='Anomalia-light'
+                            color="rgb(121,2,142)"
+                        >
+                            שעות
+                        </TextArea>
+                    </DigitContainer>
+                    <DigitContainer>
+                        <FlipCard 
+                            digit={days}
+                            shuffle={daysShuffle}
+                        />
+                        <TextArea
+                            fontFamily='Anomalia-light'
+                            color="rgb(121,2,142)"
+                        >
+                            ימים
+                        </TextArea>
+                    </DigitContainer>
+                </Countdown>
+            </TopPartContainer>
+            <ScheduleContainer
+                ref={scheduleRef}
             >
-                {StaticData.introductionParagraph}
-            </TextArea>
-            <TextArea
-                fontFamily="Assistant-Light"
-                marginTop='1.2rem'
-                fontSize="0.85rem"
-                width="95%"
-            >
-                {StaticData.commanders}
-            </TextArea>
-            <TitlesContainer>
                 <TextArea
                     fontFamily="Anomalia-demibold"
-                    fontSize="1.5rem"
+                    fontSize='2rem'
+                    color="rgb(76,1,94)"
                 >
-                    {StaticData.titles.who}
+                    {
+                        ScheduleData.title
+                    }
+                </TextArea>
+                <PartContainer>
+                    <PartWrapper>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-SemiBold"
+                            fontSize="1.4rem"
+                        >
+                            {
+                                ScheduleData.firstEvent.hour
+                            }
+                        </TextArea>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-Light"
+                            fontSize="1.2rem"
+                        >
+                            {
+                                ScheduleData.firstEvent.event
+                            }
+                        </TextArea>
+                    </PartWrapper>
+                </PartContainer>
+                <PartContainer>
+                    <WithIconWrapper>
+                        <PartWrapper>
+                                <TextArea
+                                    color="rgb(76,1,94)"
+                                    fontFamily="Assistant-SemiBold"
+                                    fontSize="1.4rem"
+                                >
+                                    {
+                                        ScheduleData.secondEvent.hour
+                                    }
+                                </TextArea>
+                                <div
+                                    style={{
+                                        width: "95%",
+                                        display: 'flex',
+                                        justifyContent: "flex-start"
+                                    }}
+                                >
+                                    <TextArea
+                                        color="rgb(76,1,94)"
+                                        fontFamily="Assistant-Light"
+                                        fontSize="1.2rem"
+                                    >
+                                        {
+                                            ScheduleData.secondEvent.event
+                                        }
+                                    </TextArea>
+                                </div>
+                        </PartWrapper>
+                        <img 
+                            src={Vr}
+                            style={{
+                                height: '4rem',
+                                position: "relative",
+                                left: "-14.6rem",
+                                top: "-4.4rem"
+                            }}
+                            alt='vr'
+                        />
+                    </WithIconWrapper>
+                </PartContainer>
+                <PartContainer>
+                <WithIconWrapper>
+                        <PartWrapper>
+                                <TextArea
+                                    color="rgb(76,1,94)"
+                                    fontFamily="Assistant-SemiBold"
+                                    fontSize="1.4rem"
+                                >
+                                    {
+                                        ScheduleData.thirdEvent.hour
+                                    }
+                                </TextArea>
+                                <div
+                                    style={{
+                                        width: "95%",
+                                        display: 'flex',
+                                        justifyContent: "flex-end"
+                                    }}
+                                >
+                                    <TextArea
+                                        color="rgb(76,1,94)"
+                                        fontFamily="Assistant-Light"
+                                        fontSize="1.2rem"
+                                    >
+                                        {
+                                            ScheduleData.thirdEvent.event
+                                        }
+                                    </TextArea>
+                                </div>
+                        </PartWrapper>
+                        <img 
+                            src={Micro}
+                            style={{
+                                height: '4rem',
+                                position: "relative",
+                                right: "0.3rem",
+                                top: "-4.4rem"
+                            }}
+                            alt='microcopy'
+                        />
+                    </WithIconWrapper>
+                </PartContainer>
+                <PartContainer>
+                <PartWrapper>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-SemiBold"
+                            fontSize="1.4rem"
+                        >
+                            {
+                                ScheduleData.fourthEvent.hour
+                            }
+                        </TextArea>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-Light"
+                            fontSize="1.2rem"
+                        >
+                            {
+                                ScheduleData.fourthEvent.event
+                            }
+                        </TextArea>
+                    </PartWrapper>
+                </PartContainer>
+                <PartContainer>
+                <WithIconWrapper>
+                        <PartWrapper>
+                                <TextArea
+                                    color="rgb(76,1,94)"
+                                    fontFamily="Assistant-SemiBold"
+                                    fontSize="1.4rem"
+                                >
+                                    {
+                                        ScheduleData.fithEvent.hour
+                                    }
+                                </TextArea>
+                                <div
+                                    style={{
+                                        width: "95%",
+                                        display: 'flex',
+                                        justifyContent: "flex-start"
+                                    }}
+                                >
+                                    <TextArea
+                                        color="rgb(76,1,94)"
+                                        fontFamily="Assistant-Light"
+                                        fontSize="1.2rem"
+                                    >
+                                        {
+                                            ScheduleData.fithEvent.event
+                                        }
+                                    </TextArea>
+                                </div>
+                        </PartWrapper>
+                        <img 
+                            src={AI}
+                            style={{
+                                height: '4rem',
+                                position: "relative",
+                                left: "-14.6rem",
+                                top: "-4.4rem"
+                            }}
+                            alt='vr'
+                        />
+                    </WithIconWrapper>
+                </PartContainer>
+                <PartContainer>
+                <PartWrapper>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-SemiBold"
+                            fontSize="1.4rem"
+                        >
+                            {
+                                ScheduleData.sixthEvent.hour
+                            }
+                        </TextArea>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-Light"
+                            fontSize="1.2rem"
+                        >
+                            {
+                                ScheduleData.sixthEvent.event
+                            }
+                        </TextArea>
+                    </PartWrapper>
+                </PartContainer>
+                <PartContainer>
+                <PartWrapper>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-SemiBold"
+                            fontSize="1.4rem"
+                        >
+                            {
+                                ScheduleData.seventhEvent.hour
+                            }
+                        </TextArea>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-Light"
+                            fontSize="1.2rem"
+                        >
+                            {
+                                ScheduleData.seventhEvent.event
+                            }
+                        </TextArea>
+                    </PartWrapper>
+                </PartContainer>
+                <PartContainer>
+                <PartWrapper>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-SemiBold"
+                            fontSize="1.4rem"
+                        >
+                            {
+                                ScheduleData.eighthEvent.hour
+                            }
+                        </TextArea>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-Light"
+                            fontSize="1.2rem"
+                        >
+                            {
+                                ScheduleData.eighthEvent.event
+                            }
+                        </TextArea>
+                    </PartWrapper>
+                </PartContainer>
+                <PartContainer>
+                <PartWrapper>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-SemiBold"
+                            fontSize="1.4rem"
+                        >
+                            {
+                                ScheduleData.ninthEvent.hour
+                            }
+                        </TextArea>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-Light"
+                            fontSize="1.2rem"
+                        >
+                            {
+                                ScheduleData.ninthEvent.event
+                            }
+                        </TextArea>
+                    </PartWrapper>
+                </PartContainer>
+                <PartContainer>
+                <WithIconWrapper>
+                        <PartWrapper>
+                                <TextArea
+                                    color="rgb(76,1,94)"
+                                    fontFamily="Assistant-SemiBold"
+                                    fontSize="1.4rem"
+                                >
+                                    {
+                                        ScheduleData.tenthEvent.hour
+                                    }
+                                </TextArea>
+                                <div
+                                    style={{
+                                        width: "95%",
+                                        display: 'flex',
+                                        justifyContent: "flex-end"
+                                    }}
+                                >
+                                    <TextArea
+                                        color="rgb(76,1,94)"
+                                        fontFamily="Assistant-Light"
+                                        fontSize="1.2rem"
+                                    >
+                                        {
+                                            ScheduleData.tenthEvent.event
+                                        }
+                                    </TextArea>
+                                </div>
+                        </PartWrapper>
+                        <img 
+                            src={Workshop}
+                            style={{
+                                height: '4rem',
+                                position: "relative",
+                                right: "0.3rem",
+                                top: "-4.4rem"
+                            }}
+                            alt='workshop'
+                        />
+                    </WithIconWrapper>
+                </PartContainer>
+                <PartContainer>
+                <PartWrapper>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-SemiBold"
+                            fontSize="1.4rem"
+                        >
+                            {
+                                ScheduleData.eleventhEvent.hour
+                            }
+                        </TextArea>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-Light"
+                            fontSize="1.2rem"
+                        >
+                            {
+                                ScheduleData.eleventhEvent.event
+                            }
+                        </TextArea>
+                    </PartWrapper>
+                </PartContainer>
+                <PartContainer>
+                <PartWrapper>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-SemiBold"
+                            fontSize="1.4rem"
+                        >
+                            {
+                                ScheduleData.twelveEvent.hour
+                            }
+                        </TextArea>
+                        <TextArea
+                            color="rgb(76,1,94)"
+                            fontFamily="Assistant-Light"
+                            fontSize="1.2rem"
+                        >
+                            {
+                                ScheduleData.twelveEvent.event
+                            }
+                        </TextArea>
+                    </PartWrapper>
+                </PartContainer>
+            </ScheduleContainer>
+            <ContactUsContainer>
+                <TextArea
+                    fontFamily="Anomalia-Demibold"
+                    fontSize="1.4rem"
+                    color="rgb(76,1,94)"
+                >
+                    {ContactUs.title}
                 </TextArea>
                 <TextArea
-                    fontFamily="Assistant-Light"
-                    fontSize="0.9rem"
+                    fontFamily="Assistant-Regular"
+                    fontSize="1rem"
+                    color="rgb(76,1,94)"
                 >
-                    {StaticData.explanation.who}
+                    {ContactUs.invatation}
                 </TextArea>
-                <Seperaor />
+                <a
+                    href={`mailto:${ContactUs.email}`}
+                    style={{
+                        textDecoration: "none",
+                        color: 'rgb(54,103,208)',
+                        fontSize: "1rem",
+                        fontFamily: "Assistant-Regular"
+                    }}
+                >
+                    {ContactUs.email}
+                </a>
                 <TextArea
-                    fontFamily="Anomalia-demibold"
-                    fontSize="1.5rem"
+                    fontFamily="Assistant-Regular"
+                    fontSize="1rem"
+                    color="rgb(76,1,94)"
                 >
-                    {StaticData.titles.where}
+                    {ContactUs.gayasInfo}
                 </TextArea>
-                <TextArea
-                    fontFamily="Assistant-Light"
-                    fontSize="0.9rem"
-                >
-                    {StaticData.explanation.where}
-                </TextArea>
-                <Seperaor />
-                <TextArea
-                    fontFamily="Anomalia-demibold"
-                    fontSize="1.5rem"
-                >
-                    {StaticData.titles.when}
-                </TextArea>
-                <TextArea
-                    fontFamily="Assistant-Light"
-                    fontSize="0.9rem"
-                    textAlign="right"
-                >
-                    {StaticData.explanation.when}
-                </TextArea>
-                <Seperaor />
-                <TextArea
-                    fontFamily="Anomalia-demibold"
-                    fontSize="1.5rem"
-                >
-                    {StaticData.titles.moreInfo}
-                </TextArea>
-                <TextArea
-                    fontFamily="Assistant-Light"
-                    fontSize="0.9rem"
-                    textAlign="right"
-                >
-                    {StaticData.explanation.moreInfoPartOne}
-                    <a 
-                        href={`mailTo: ${StaticData.explanation.moreInfoPartTwo}`}
-                        style={{
-                            textDecoration: "none",
-                            color: "#3ca6d8"
-                        }}
-                    >
-                        {StaticData.explanation.moreInfoPartTwo}
-                    </a>
-                    {StaticData.explanation.moreInfoPartThree}
-                </TextArea>
-            </TitlesContainer>
+            </ContactUsContainer>
         </ContentWrapper>
     )
 }
