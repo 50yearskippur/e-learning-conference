@@ -8,6 +8,7 @@ import selectedAbout from '../../static-media/selectedAbout.png';
 import Schedule from '../../static-media/Schedule.png';
 import selectedSchedule from '../../static-media/selectedSchedule.png';
 import Signup from '../../static-media/signup.png';
+import { PageData } from "../../pages/HomePage/pageData";
 
 
 const BarContainer = styled.div({
@@ -53,9 +54,10 @@ export default function Bar({scheduleRef}){
                     src={selectedIcon === 3 ? 
                             selectedMain : Main} 
                     onClick={()=>{setSelected(3); navigate('/e-learning-conference')}}
-                />                <Icon 
-                src={Signup} 
-                onClick={()=>{}}
+                />
+                <Icon 
+                    src={Signup} 
+                    onClick={()=>{window.location.href = PageData.additionalInfo.signupForm}}
                 />
                 <Icon 
                     src={selectedIcon === 2 ? 

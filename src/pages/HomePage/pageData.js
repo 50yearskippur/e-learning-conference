@@ -10,7 +10,8 @@ export const PageData = {
     },
     additionalInfo: {
         wazeNavigation: "https://ul.waze.com/ul?preview_venue_id=22806849.228199566.348637&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
-        calendarEvent: 'https://calendar.google.com/calendar/r/eventedit?text=כנס+טכנולוגיות+למידה&dates=20221120T120000Z/20221120T150000Z&details=כנס+טכנולוגיות+למידה+בבהד+15&location=מחנה+הרצוג+גלילות+רמת+השרון'
+        calendarEvent: 'https://calendar.google.com/calendar/r/eventedit?text=כנס+טכנולוגיות+למידה&dates=20221211T120000Z/20221211T150000Z&details=כנס+טכנולוגיות+למידה+בבהד+15&location=מחנה+הרצוג+גלילות+רמת+השרון',
+        signupForm: 'https://forms.office.com/r/JYwbqccc3d'
     }
 }
 

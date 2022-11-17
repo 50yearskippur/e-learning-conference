@@ -164,7 +164,7 @@ export default function HomePage({scheduleRef}){
                         type={true}
                         width="100%"
                         fontSize='1.3rem'
-                        onClick={()=>{}}
+                        onClick={()=>{window.location.href = PageData.additionalInfo.signupForm}}
                     />
                     <Button 
                         text={PageData.buttons.openWaze}
