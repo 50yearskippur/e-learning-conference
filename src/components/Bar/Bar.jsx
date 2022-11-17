@@ -53,7 +53,7 @@ export default function Bar({scheduleRef}){
                 <Icon 
                     src={selectedIcon === 3 ? 
                             selectedMain : Main} 
-                    onClick={()=>{setSelected(3); navigate('/e-learning-conference')}}
+                    onClick={()=>{setSelected(3); window.scrollTo({top: 0, behavior: 'smooth'}); navigate('/e-learning-conference')}}
                 />
                 <Icon 
                     src={Signup} 
