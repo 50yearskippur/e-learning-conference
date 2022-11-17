@@ -38,6 +38,10 @@ export default function Bar({scheduleRef}){
     const [selectedIcon ,setSelected] = useState(3);
     const navigate = useNavigate();
 
+    const scrollToSchedule = ()=>{
+        scheduleRef.current?.scrollIntoView({ behavior: 'smooth'})
+    }
+
     return(
         <BarContainer>
             <IconsContainer>
@@ -58,7 +62,12 @@ export default function Bar({scheduleRef}){
                             selectedSchedule : Schedule} 
                     onClick={()=>{
                         setSelected(2); 
-                        scheduleRef.current.scrollIntoView({ behavior: 'smooth'})
+                        if(window.location.pathname.includes("about-us")){
+                            navigate('/e-learning-conference');
+                            setTimeout(scrollToSchedule, 200)
+                        }else{
+                            scrollToSchedule();
+                        }
                     }}
                 />
             </IconsContainer>
