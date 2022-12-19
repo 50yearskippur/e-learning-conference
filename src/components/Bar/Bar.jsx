@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Main from '../../static-media/Main.png';
 import selectedMain from '../../static-media/SelectedMain.png';
 import about from '../../static-media/about.png';
@@ -38,6 +38,7 @@ const Icon = styled.img({
 export default function Bar({scheduleRef}){
     const [selectedIcon ,setSelected] = useState(3);
     const navigate = useNavigate();
+    const location = useLocation();
 
     const scrollToSchedule = ()=>{
         scheduleRef.current?.scrollIntoView({ behavior: 'smooth'})
@@ -64,7 +65,7 @@ export default function Bar({scheduleRef}){
                             selectedSchedule : Schedule} 
                     onClick={()=>{
                         setSelected(2); 
-                        if(window.location.pathname.includes("about-us")){
+                        if(location.pathname === "/about-us"){
                             navigate('/e-learning-conference');
                             setTimeout(scrollToSchedule, 200)
                         }else{

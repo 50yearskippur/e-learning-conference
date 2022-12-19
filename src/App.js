@@ -26,7 +26,7 @@ function App() {
       body.style.overflow = 'auto';
     }
 
-  },[navigate])  
+  },[navigate, location])  
 
 
   return (
