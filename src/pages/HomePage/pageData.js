@@ -2,7 +2,7 @@ export const PageData = {
     title: 'כנס טכנולוגיות למידה',
     subTitle: 'בראשות מפקד מערך ההדרכה',
     firstParagraph: 'כנס חדשני וראשון מסוגו בנושא טכנולוגיות למידה \n הכנס מיועד לאנשי מערך ההדרכה \n ולמובילי הדרכה באמ"ן',
-    locationInfo: '11.12.2022 | בה"ד 15 | אולם נגב',
+    locationInfo: '16.01.2023 | בה"ד 15 | אולם נגב',
     buttons: {
         signUp: 'להרשמה',
         openWaze: 'פתח בWAZE',
@@ -10,7 +10,7 @@ export const PageData = {
     },
     additionalInfo: {
         wazeNavigation: "https://ul.waze.com/ul?preview_venue_id=22806849.228199566.348637&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
-        calendarEvent: 'https://calendar.google.com/calendar/r/eventedit?text=כנס+טכנולוגיות+למידה&dates=20221211T120000Z/20221211T150000Z&details=כנס+טכנולוגיות+למידה+בבהד+15&location=מחנה+הרצוג+גלילות+רמת+השרון',
+        calendarEvent: 'https://calendar.google.com/calendar/r/eventedit?text=כנס+טכנולוגיות+למידה&dates=20230116T090000Z/20230116T160000Z&details=כנס+טכנולוגיות+למידה+בבהד+15&location=מחנה+הרצוג+גלילות+רמת+השרון',
         signupForm: 'https://forms.office.com/r/JYwbqccc3d'
     }
 }

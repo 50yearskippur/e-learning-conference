@@ -9,7 +9,7 @@ import Micro from '../../static-media/micro.png';
 import AI from '../../static-media/AI.png';
 import Workshop from '../../static-media/workshop.png';
 
-const DATE_TILL_CONFERENCE = 'December 11, 2022 09:00:00'
+const DATE_TILL_CONFERENCE = 'January 16, 2023 09:00:00'
 
 const TextArea = styled.div(({fontSize, fontFamily, width, marginTop,textAlign,color})=>({
     fontSize,

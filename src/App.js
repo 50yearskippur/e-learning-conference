@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import MobileDetection from "./utils/MobileDetection";
-import {Routes, Route, useNavigate, Navigate} from "react-router-dom";
+import {Routes, Route, useNavigate, Navigate,useLocation} from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import Bar from "./components/Bar/Bar";
 import AboutUs from "./pages/AboutUs/AboutUs";
@@ -10,7 +10,7 @@ import Header from "./components/Header/Header";
 function App() {
   const navigate = useNavigate();
   const scheduleRef = useRef(null);
-
+  const location = useLocation();
 
   useEffect(()=>{
     if(!MobileDetection()){
@@ -19,7 +19,7 @@ function App() {
     
     let body = document.querySelector("body");
 
-    if(window.location.pathname.includes("about-us")){
+    if(location.pathname === '/about-us'){
       body.style.overflow = 'hidden';
       window.scrollTo(0,0);
     }else{
