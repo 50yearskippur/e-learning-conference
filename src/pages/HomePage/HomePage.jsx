@@ -37,7 +37,7 @@ const ButtonContainer = styled.div({
 const Countdown = styled.div({
     display: "flex",
     width: "85%",
-    marginTop: "6.rem",
+    marginTop: "6.1rem",
 });
 
 const DigitContainer = styled.div({
