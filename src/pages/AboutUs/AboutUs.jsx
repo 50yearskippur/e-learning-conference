@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { staticData } from "./staticData";
-import Graph from '../../static-media/graph.png';
+import Graph from '../../static-media/graph3.png';
 
 const TextArea = styled.div(({fontSize, fontFamily, width, marginTop, textAlign, color})=>({
     fontSize,
@@ -37,7 +37,6 @@ export default function AboutUs(){
     return(
         <ContentWrapper>
             <InfoWrapper>
-
                 <TextArea
                     fontFamily="Anomalia-demibold"
                     fontSize="2rem"

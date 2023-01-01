@@ -12,11 +12,12 @@ import { PageData } from "../../pages/HomePage/pageData";
 
 
 const BarContainer = styled.div({
-    width: "100%",
+    width: "101%",
     height: "4.5rem",
     backgroundColor: "rgba(186,129,197,0.95)",
     position: 'fixed',
-    bottom: 0,
+    left: 0,
+    bottom: "-1px",
     display: 'flex',
     justifyContent: 'center'
 })
@@ -31,9 +32,6 @@ const IconsContainer = styled.div({
 const Icon = styled.img({
     height: '4.6rem'
 })
-
-
-
 
 export default function Bar({scheduleRef}){
     const [selectedIcon ,setSelected] = useState(3);

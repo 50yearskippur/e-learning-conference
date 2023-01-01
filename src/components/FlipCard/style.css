@@ -21,7 +21,8 @@ body {
   height: 5rem;
   perspective-origin: 50% 50%;
   perspective: 300px;
-  background-color: rgb(193,138,203);
+  /* background-color: rgb(193,138,203); */
+  background-color: rgb(241,229,243);
   border-radius: 3px;
   box-shadow: 0px 10px 10px -10px grey;
 }
