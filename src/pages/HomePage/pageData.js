@@ -85,7 +85,7 @@ export const ScheduleData = {
     seventhEvent: {
         hour: "13:00 - 13:40",
         texts: {
-            1: '"מה חדש בענף ההדרכה?"',
+            1: 'מה חדש במערך ההדרכה?',
         },
     },
     eighthEvent: {
@@ -151,6 +151,6 @@ export const ContactUs = {
     gayasInfo: "או במייל הצבאי - גאיה גדג' Ctrl + K",
     gayasInfoHTML:
     <>
-    או במייל הצבאי - גאיה גדג' <kbd style={kbdStyle}>Ctrl + K</kbd>
+    או במייל הצבאי - צביקה פרנקל / גאיה גדג' <kbd style={kbdStyle}>Ctrl + K</kbd>
     </>,
 };
