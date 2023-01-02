@@ -11,6 +11,9 @@ const Background = styled.div({
     backgroundSize: "100% 100%",
     backgroundRepeat: "no-repeat",
     height: "fit-content",
+    "@media (max-width: 350px)": {
+        paddingBottom: "20%"
+    },
     width: "100%",
     position: "absolute",
     top: 0,

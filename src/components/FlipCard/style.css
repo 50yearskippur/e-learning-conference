@@ -38,7 +38,7 @@ body {
 }
 .upperCard span, .lowerCard span {
   font-size: 3rem;
-  font-family: Assistant-Regular;
+  font-family: Assistant-Bold;
   color: #79028e;
 }
 
@@ -74,7 +74,7 @@ body {
           backface-visibility: hidden;
 }
 .flipCard span {
-  font-family: Assistant-Regular;
+  font-family: Assistant-Bold;
   font-size: 3rem;
   color: #79028e;
 }

@@ -16,6 +16,10 @@ const TextArea = styled.div(({ flip, fontSize, fontFamily, width, marginTop, mar
     direction: flip ? "ltr" : "rtl",
     color: color ? color : "white",
     textAlign: textAlign ? textAlign : "center",
+    "@media (max-width: 350px)": {
+        padding: "0.5%",
+        fontSize: `calc(${fontSize} - 0.1rem)`
+    },
 }));
 
 const ContentWrapper = styled.div({
@@ -37,7 +41,7 @@ const ButtonContainer = styled.div({
 const Countdown = styled.div({
     display: "flex",
     width: "85%",
-    marginTop: "6.1rem",
+    marginTop: "23%",
 });
 
 const DigitContainer = styled.div({
@@ -56,7 +60,7 @@ const TopPartContainer = styled.div({
 });
 
 const ScheduleContainer = styled.div({
-    marginTop: "3rem",
+    marginTop: "2rem",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -78,7 +82,7 @@ const ContactUsContainer = styled.div({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginTop: "1.9rem",
+    marginTop: "2rem",
 });
 
 const PartWrapper = styled.div({
@@ -134,7 +138,7 @@ export default function HomePage({ scheduleRef }) {
                 <TextArea fontFamily="Anomalia-demibold" fontSize="2rem">
                     {PageData.title}
                 </TextArea>
-                <TextArea fontFamily="Assistant-SemiBold" fontSize="1.3rem" marginTop="0.4rem">
+                <TextArea fontFamily="Assistant-SemiBold" fontSize="1.6rem" marginTop="0.4rem">
                     {PageData.subTitle}
                 </TextArea>
                 <TextArea fontFamily="Assistant-Light" width="76%" marginTop="1rem">
@@ -153,8 +157,8 @@ export default function HomePage({ scheduleRef }) {
                             window.location.href = PageData.additionalInfo.signupForm;
                         }}
                     />
-                    <Button text={PageData.buttons.openWaze} type={false} width="47.5%" fontSize="1.1rem" onClick={openWaze} style={{ marginTop: "5%", marginLeft: "2.5%" }} />
-                    <Button text={PageData.buttons.addToCalendar} type={false} width="47.5%" fontSize="1.1rem" onClick={addToGCal} style={{ marginTop: "5%", marginRight: "2.5%" }} />
+                    <Button text={PageData.buttons.openWaze} type={false} width="47.5%" fontSize="1rem" onClick={openWaze} style={{ marginTop: "5%", marginLeft: "2.5%" }} />
+                    <Button text={PageData.buttons.addToCalendar} type={false} width="47.5%" fontSize="1rem" onClick={addToGCal} style={{ marginTop: "5%", marginRight: "2.5%" }} />
                 </ButtonContainer>
                 <Countdown>
                     <DigitContainer>
@@ -188,7 +192,7 @@ export default function HomePage({ scheduleRef }) {
                     {ScheduleData.title}
                 </TextArea>
                 {eventsArray.map((itm, idx) => (
-                    <PartContainer key={idx}>
+                    <PartContainer key={idx + 1}>
                         {!itm?.image ? (
                             <PartWrapper>
                                 <TextArea color="rgb(76,1,94)" fontFamily="Assistant-SemiBold" fontSize="1.4rem" flip>
@@ -197,9 +201,9 @@ export default function HomePage({ scheduleRef }) {
                                 {Object.values(itm.texts).map((txt, idx2) => (
                                     <>
                                         {txt === "break" ? (
-                                            <hr style={{ width: "83%", height: "1px", border: 0, borderTop: "1px solid rgb(76,1,94)" }} />
+                                            <hr key={idx2 + 30} style={{ width: "83%", height: "1px", border: 0, borderTop: "1px solid rgb(76,1,94)" }} />
                                         ) : (
-                                            <TextArea key={`${idx} ${idx2}}`} color="rgb(76,1,94)" fontFamily="Assistant-Light" fontSize="1.2rem" width="90%">
+                                            <TextArea key={idx2 + 30} color="rgb(76,1,94)" fontFamily="Assistant-Light" fontSize="1.2rem" width="90%">
                                                 {txt}
                                             </TextArea>
                                         )}
@@ -219,9 +223,9 @@ export default function HomePage({ scheduleRef }) {
                                         {Object.values(itm.texts).map((txt, idx2) => (
                                             <>
                                                 {txt === "break" ? (
-                                                    <hr style={{ width: "83%", height: "1px", border: 0, borderTop: "1px solid rgb(76,1,94)" }} />
+                                                    <hr key={idx2 + 30} style={{ width: "83%", height: "1px", border: 0, borderTop: "1px solid rgb(76,1,94)" }} />
                                                 ) : (
-                                                    <TextArea key={`${idx} ${idx2}}`} color="rgb(76,1,94)" fontFamily="Assistant-Light" fontSize="1.2rem">
+                                                    <TextArea key={idx2 + 30} color="rgb(76,1,94)" fontFamily="Assistant-Light" fontSize="1.2rem">
                                                         {txt}
                                                     </TextArea>
                                                 )}

@@ -7,30 +7,32 @@ const TextArea = styled.div(({fontSize, fontFamily, width, marginTop, textAlign,
     fontSize,
     fontFamily,
     marginTop,
-    width,
+    width: width ?? "80%",
     color: color ? color : "white",
     textAlign: textAlign ? textAlign : "center"
 }))
 
 const ContentWrapper = styled.div(()=>({
-    display: 'flex',
+    display: "flex",
     flexDirection: "column",
     alignItems: "center",
     height: '100rem',
-    whiteSpace: 'pre-wrap',
-    overflow: 'hidden'
 }));
 
 const GraphElement = styled.img({
     width: "80%",
-    marginTop: "2rem"
+    maxWidth: "300px",
+    "@media (max-width: 380px)": {
+        maxWidth: "270px"
+    },
+    marginTop: "2.8rem"
 })
 
 const InfoWrapper = styled.div({
     marginTop: "3.5rem",
     display: 'flex',
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
 })
 
 export default function AboutUs(){
@@ -46,7 +48,7 @@ export default function AboutUs(){
                 <TextArea
                     fontFamily="Assistant-Regular"
                     fontSize='1rem'
-                    marginTop="1.5rem"
+                    marginTop="1.3rem"
                 >
                     {staticData.explanationParagraph}
                 </TextArea>
@@ -56,7 +58,7 @@ export default function AboutUs(){
                 <TextArea
                     fontFamily="Assistant-SemiBold"
                     fontSize="1rem"
-                    marginTop="6rem"
+                    marginTop="6.5rem"
                     color="rgb(84,43,104)"
                 >
                     {staticData.listTitle}

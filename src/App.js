@@ -33,6 +33,7 @@ function App() {
                 <Route path="/" element={<Navigate to={"/e-learning-conference"} />} />
                 <Route path="/e-learning-conference" element={<HomePage scheduleRef={scheduleRef} />} />
                 <Route path="/about-us" element={<AboutUs />} />
+                <Route path="/notMobile" element={<h1>מצטערים, אתר זה נתמך רק במובייל</h1>} />
             </Routes>
             <Bar scheduleRef={scheduleRef} />
         </>
