@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { staticData } from "./staticData";
-import Graph from "../../static-media/graph4.png";
+import Graph from "../../static-media/graph5.png";
 
 const TextArea = styled.div(({ fontSize, fontFamily, width, marginTop, textAlign, color }) => ({
     fontSize,
@@ -46,7 +46,7 @@ export default function AboutUs() {
                     {staticData.explanationParagraph}
                 </TextArea>
                 <GraphElement src={Graph} />
-                <TextArea fontFamily="Assistant-SemiBold" fontSize="1rem" marginTop="6.5rem" color="rgb(84,43,104)">
+                <TextArea fontFamily="Assistant-SemiBold" fontSize="1rem" marginTop="7rem" color="rgb(84,43,104)">
                     {staticData.listTitle}
                 </TextArea>
                 <TextArea fontFamily="Assistant-Light" fontSize="1rem" marginTop="0.3rem" color="rgb(84,43,104)">
