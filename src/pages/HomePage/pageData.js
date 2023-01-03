@@ -92,7 +92,7 @@ export const ScheduleData = {
     eighthEvent: {
         hour: "13:40 - 13:50",
         texts: {
-            1: "התפזרות וחלוקה לסדנאות",
+            1: "חלוקה לסדנאות",
         },
     },
     ninthEvent: {
