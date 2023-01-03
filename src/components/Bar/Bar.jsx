@@ -2,11 +2,11 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import { useNavigate, useLocation } from "react-router-dom";
 import Main from '../../static-media/Main.png';
-import selectedMain from '../../static-media/SelectedMain.png';
+import selectedMain from '../../static-media/selectedMain2.png';
 import about from '../../static-media/about.png';
-import selectedAbout from '../../static-media/selectedAbout.png';
+import selectedAbout from '../../static-media/selectedAbout2.png';
 import Schedule from '../../static-media/Schedule.png';
-import selectedSchedule from '../../static-media/selectedSchedule.png';
+import selectedSchedule from '../../static-media/selectedSchedule2.png';
 import Signup from '../../static-media/signup.png';
 import { PageData } from "../../pages/HomePage/pageData";
 

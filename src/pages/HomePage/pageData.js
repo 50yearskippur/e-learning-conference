@@ -33,7 +33,7 @@ export const ScheduleData = {
         hour: "09:45 - 10:00",
         texts: {
             1: "יריית פתיחה",
-            2: "מפקד מערך ההדרכה - ליאור בלופרב",
+            2: "מפקד מערך ההדרכה",
         },
     },
     thirdEvent: {
@@ -63,7 +63,7 @@ export const ScheduleData = {
         hour: "11:15 - 12:15",
         texts: {
             1: '"חדשנות פורצת גבולות"',
-            2: "צביקה פרנקל",
+            2: 'רת"ח טכנולוגיות למידה',
         },
         image: {
             src: Vr,
@@ -79,13 +79,14 @@ export const ScheduleData = {
     sixthEvent: {
         hour: "12:15 - 13:00",
         texts: {
-            1: "הפסקה",
+            1: "הפסקת צהריים",
         },
     },
     seventhEvent: {
         hour: "13:00 - 13:40",
         texts: {
             1: 'מה חדש במערך ההדרכה?',
+            2: 'TED טכנולוגיות למידה'
         },
     },
     eighthEvent: {
@@ -103,7 +104,7 @@ export const ScheduleData = {
             4: '(בהובלת מו"ח)',
             5: "break",
             6: "עקרונות עיצוב ויישומם בהדרכה",
-            7: "(בהובלת ארטק)",
+            7: "(בהובלת ArTech)",
         },
         image: {
             src: Workshop,

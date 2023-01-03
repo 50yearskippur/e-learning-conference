@@ -19,8 +19,10 @@ function App() {
         let body = document.querySelector("body");
 
         if (location.pathname === "/about-us") {
-            body.style.overflow = "hidden";
             window.scrollTo(0, 0);
+            if (window.innerHeight >= 650) {
+                body.style.overflow = "hidden";
+            }
         } else {
             body.style.overflow = "auto";
         }

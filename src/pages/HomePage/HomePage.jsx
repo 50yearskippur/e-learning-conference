@@ -17,8 +17,8 @@ const TextArea = styled.div(({ flip, fontSize, fontFamily, width, marginTop, mar
     color: color ? color : "white",
     textAlign: textAlign ? textAlign : "center",
     "@media (max-width: 350px)": {
-        padding: "0.5%",
-        fontSize: `calc(${fontSize} - 0.1rem)`
+        padding: "1%",
+        fontSize: `calc(${fontSize} - 0.2rem)`,
     },
 }));
 
@@ -41,7 +41,8 @@ const ButtonContainer = styled.div({
 const Countdown = styled.div({
     display: "flex",
     width: "85%",
-    marginTop: "23%",
+    // marginTop: "23%",
+    marginTop: "8.2rem",
 });
 
 const DigitContainer = styled.div({
@@ -132,14 +133,16 @@ export default function HomePage({ scheduleRef }) {
         window.location.href = PageData.additionalInfo.calendarEvent;
     };
 
+    // <div style={{ height: "100%", width: "100%", display: "none" }}>
+    //     <TextArea fontFamily="Assistant-SemiBold" fontSize="1.6rem" marginTop="0.4rem">
+    //         {PageData.subTitle}
+    //     </TextArea>
+    // </div>
     return (
         <ContentWrapper>
             <TopPartContainer>
                 <TextArea fontFamily="Anomalia-demibold" fontSize="2rem">
                     {PageData.title}
-                </TextArea>
-                <TextArea fontFamily="Assistant-SemiBold" fontSize="1.6rem" marginTop="0.4rem">
-                    {PageData.subTitle}
                 </TextArea>
                 <TextArea fontFamily="Assistant-Light" width="76%" marginTop="1rem">
                     {PageData.firstParagraph}
